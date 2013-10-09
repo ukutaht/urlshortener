@@ -1,10 +1,14 @@
 get '/' do
-
-erb :index
+ erb :index
 end
 
 post '/urls' do
-  Url.create(params[:long_url])
+  @url = Url.create(:long_url => params[:long_url])
+  if @url.valid?
+    redirect to '/?sucess=true'
+  else
+    redirect to '/?sucess=false'
+  end
 end
 
 get '/:short_url' do
