@@ -2,8 +2,49 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
 th {
   text-align: left;
+}
+
+form {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.feedback{
+border: 1px solid;
+margin: 10px 0px;
+padding:15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;  
+}
+
+#error{
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+#success{
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+
+input    {
+  width:95%;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+  height: 25px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color:#1F1F31;
+  text-align:center;
+  border-bottom: 1px solid #999;
 }

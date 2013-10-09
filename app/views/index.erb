@@ -1,20 +1,22 @@
 <div class="container">
+  <h2> URL SHORTENER </h2>
   <br>
   <form action="/urls" method="post">
   <input type="text" name="long_url"/>
-  <input type="submit"/>
+  <input id="button" type="submit"/>
 
   <% if params[:flash] == 'success' %>
-  <div id="success-feedback">
+  <div class= "feedback" id="success">
     Success!
-    Your short link is 
+    Your short link is:
+    <br>
     <a href = '/<%= params[:short_url] %>'>
     localhost:9393/<%= params[:short_url]%> 
   </a>
   </div> 
 
   <% elsif params[:flash] == 'error' %>
-  <div id="error-feedback">
+  <div class = "feedback"id="error">
     "Your link must begin with http://"
   </div> 
 
