@@ -1,6 +1,18 @@
 <div class="container">
+  <br>
   <form action="/urls" method="post">
   <input type="text" name="long_url"/>
   <input type="submit"/>
 
+  <% if params[:flash] == 'success' %>
+  <div id="success-feedback">
+    "Success"
+  </div> 
+
+  <% elsif params[:flash] == 'error' %>
+  <div id="error-feedback">
+    "Your link must begin with http://"
+  </div> 
+
+  <% end %>
 </div>
