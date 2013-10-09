@@ -5,7 +5,7 @@ end
 post '/urls' do
   @url = Url.create(:long_url => params[:long_url])
   if @url.valid?
-    redirect to "/?flash=success"
+    redirect to "/?flash=success&short_url=" + @url.short_url
   else
     redirect to "/?flash=error"
   end

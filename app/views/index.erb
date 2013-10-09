@@ -6,7 +6,11 @@
 
   <% if params[:flash] == 'success' %>
   <div id="success-feedback">
-    "Success"
+    Success!
+    Your short link is 
+    <a href = '/<%= params[:short_url] %>'>
+    localhost:9393/<%= params[:short_url]%> 
+  </a>
   </div> 
 
   <% elsif params[:flash] == 'error' %>
